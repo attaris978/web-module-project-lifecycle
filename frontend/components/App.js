@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from './Form';
 
 const URL = 'http://localhost:9000/api/todos'
 
@@ -20,9 +21,10 @@ export default class App extends React.Component {
     .catch(error => console.log(error))
   }
   render() {
-    return (
+    return ( <>
               <h1>Hiya</h1>
-
+              <Form todos={this.state.data} />
+              </>
     )
   }
 }
