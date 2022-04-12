@@ -2,6 +2,6 @@ import React from 'react'
 
 export default class Todo extends React.Component {
   render() {
-    return null
+    return <h2>{this.props.name}</h2>
   }
 }

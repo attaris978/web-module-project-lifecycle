@@ -20,7 +20,10 @@ export default class Form extends React.Component {
         completed: false,
       };
     };
-    console.log(createNewTodo());
+    this.props.addToList(createNewTodo());
+    this.setState({
+      todoText: ""
+    });
   };
 
   handleChange = (e) => {
@@ -32,6 +35,8 @@ export default class Form extends React.Component {
   render() {
     return (
       <FormWrapper onSubmit={(e) => this.handleSubmit(e)}>
+        <TodoList
+        todos={this.props.todos} />
         <input
           type="text"
           placeholder="Enter New Todo Item"
