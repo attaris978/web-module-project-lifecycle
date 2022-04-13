@@ -13,7 +13,10 @@ constructor() {
           return(
           <Todo
           name={todo.name}
-          key={todo.id} />
+          key={todo.id}
+          id={todo.id}
+          completed={todo.completed}
+          toggleCompleted={this.props.toggleCompleted} />
           )
         })}
                         
